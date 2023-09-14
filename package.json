@@ -4,13 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon backend/server.js "
+    "start": "nodemon backend/server.js ",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm start\" \"npm run client\""
   },
   "author": "Tripti",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^8.2.1",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "mongodb": "^6.0.0",
+    "mongoose": "^7.5.1",
     "nodemon": "^3.0.1"
   }
 }
